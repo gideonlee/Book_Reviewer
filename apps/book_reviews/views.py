@@ -45,7 +45,7 @@ def login(request):
 		else: 
 			for error in result[1]:
 				messages.error(request, error)
-			return redirect(reverse('book_reviews/index'))
+			return redirect(reverse('book_reviews:index'))
 
 def logout(request):
 	request.session.pop('user_id')

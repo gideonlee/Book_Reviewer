@@ -38,6 +38,7 @@ class UserManager(models.Manager):
 		except:
 			errors.append('Invalid Email/Password')
 			return (False, errors)
+			
 	def profile_info(self, **kwargs):
 		user = User.objects.get(id=kwargs['id'])
 		reviews = Review.objects.filter(user=user)
